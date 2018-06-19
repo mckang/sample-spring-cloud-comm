@@ -17,11 +17,11 @@ branch: 'master'
 }
   stage('Image') {
    dir ('account-service') {
-    def app = docker.build "piomin/account-service:${env.version}"
+    def app = docker.build "mckang/account-service:${env.version}"
 app.push() }
 }
   stage ('Run') {
-   docker.image("piomin/account-service:${env.version}").run('-p
+   docker.image("mckang/account-service:${env.version}").run('-p
 8091:8091 -d --name account --network sample-spring-cloud-network')
   }
 } }
