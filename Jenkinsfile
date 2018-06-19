@@ -21,7 +21,6 @@ branch: 'master'
 app.push() }
 }
   stage ('Run') {
-   docker.image("mckang/account-service:${env.version}").run('-p
-8091:8091 -d --name account --network sample-spring-cloud-network')
+   docker.image("mckang/account-service:${env.version}").run('-p 8091:8091 -d --name account --network sample-spring-cloud-network')
   }
 } }
