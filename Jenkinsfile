@@ -3,6 +3,7 @@ node('dind-node-1') {
           stage('Checkout') {
            git url: 'https://github.com/mckang/sample-spring-cloud-comm.git',
 credentialsId: 'bbddd56d-2a6c-4972-b160-89791998568c',
+branch: 'master'                   
   }
   stage('Build') {
    dir('account-service') {
