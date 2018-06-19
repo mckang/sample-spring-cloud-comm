@@ -1,8 +1,8 @@
 node('dind-node-1') {
         withMaven(maven:'M3') {
           stage('Checkout') {
-           git url: 'https://github.com/piomin/sample-spring-cloud-comm.git',
-credentialsId: 'github-piomin',
+           git url: 'https://github.com/mckang/sample-spring-cloud-comm.git',
+credentialsId: 'mckang',
   }
   stage('Build') {
    dir('account-service') {
